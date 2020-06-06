@@ -2,7 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-$loop = \React\EventLoop\Factory::create();
+use \React\EventLoop\Factory;
+
+$loop = Factory::create();
 
 //addTimer is equivalent to setTimeout() in chrome Web API
 $loop->addTimer(2, function () {
