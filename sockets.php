@@ -12,6 +12,7 @@ $loop = Factory::create();
 $out = new WritableResourceStream(STDOUT, $loop);
 $server = new Server('0.0.0.0:8000', $loop);
 
+//Oneway
 $server->on('connection', function (Connection $connection) use ($out) {
 
     $out->write('New Connection' . PHP_EOL);
